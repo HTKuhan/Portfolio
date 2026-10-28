@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOJA TOLISOA Hanitse — Portfolio</title>
+  <meta name="description" content="Portfolio professionnel de SOJA TOLISOA Hanitse, Licenciée en Économie, Opératrice de saisie et Chatteur. Contactez-moi pour toute opportunité." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-brand">
+      <span class="brand-initials">HtK</span>
+      <span class="brand-name">Hanitse</span>
+    </div>
+    <button id="hamburger" class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="#about" class="nav-link">À Propos</a></li>
+      <li><a href="#competences" class="nav-link">Compétences</a></li>
+      <li><a href="#parcours" class="nav-link">Parcours</a></li>
+      <li><a href="#interets" class="nav-link">Intérêts</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button id="print-btn" class="btn btn-outline btn-sm" onclick="window.print()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      Imprimer CV
+    </button>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <div class="hero-image-wrap" data-aos="fade-right">
+          <div class="hero-image-ring"></div>
+          <div class="hero-image-ring ring2"></div>
+          <img src="assets/tof.jpg" alt="SOJA TOLISOA Hanitse - Photo de profil professionnelle" class="hero-image" id="hero-img" />
+          <div class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Disponible
+          </div>
+        </div>
+        <div class="hero-text" data-aos="fade-left">
+          <div class="hero-tag">📍 Tsiadana, Antananarivo</div>
+          <h1 class="hero-name">SOJA TOLISOA<br /><span class="name-accent">Hanitse</span></h1>
+          <p class="hero-title">Licenciée en Économie</p>
+          <p class="hero-sub">Opérateur de Saisie · Modération Chat · Bureautique</p>
+          <div class="hero-chips">
+            <span class="chip">🎓 Licence Économie</span>
+            <span class="chip">💼 2 ans d'expérience</span>
+            <span class="chip">🌍 Fr · En</span>
+          </div>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary" id="hero-contact-btn">Me contacter</a>
+            <a href="#parcours" class="btn btn-outline">Voir mon parcours</a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-dot"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Qui suis-je ?</span>
+          <h2 class="section-title">À Propos de Moi</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text" data-aos="fade-right">
+            <p class="about-description">
+              Jeune diplômé de l'Université CNTMAD avec une <strong>Licence en Économie</strong>, 
+              je suis passionné par l'analyse économique et la gestion de données. 
+              Mon expérience en tant qu'<strong>Opérateur de saisie</strong> et <strong>Chatteur</strong> 
+              m'a doté d'une grande rigueur, d'une adaptabilité à toute épreuve et d'une aisance 
+              dans les environnements numériques.
+            </p>
+            <p class="about-description">
+              Doté d'un <strong>esprit d'équipe développé</strong> et d'une nature 
+              <strong>compétitive et ambitieux</strong>, je suis à la recherche de nouvelles 
+              opportunités pour mettre mes compétences au service d'une organisation dynamique.
+            </p>
+            <div class="qualities-list">
+              <div class="quality-item">
+                <span class="quality-icon">⚡</span>
+                <span>Très grande adaptabilité</span>
+              </div>
+              <div class="quality-item">
+                <span class="quality-icon">🏆</span>
+                <span>Compétitive & ambitieuse</span>
+              </div>
+              <div class="quality-item">
+                <span class="quality-icon">🤝</span>
+                <span>Travail en équipe</span>
+              </div>
+            </div>
+          </div>
+          <div class="stats-grid" data-aos="fade-left">
+            <div class="stat-card" data-target="2" data-suffix="ans">
+              <div class="stat-number"><span class="counter">0</span><span class="stat-unit">ans</span></div>
+              <div class="stat-label">d'expérience</div>
+            </div>
+            <div class="stat-card" data-target="3" data-suffix="lang">
+              <div class="stat-number"><span class="counter">0</span><span class="stat-unit">dipl.</span></div>
+              <div class="stat-label">universitaires</div>
+            </div>
+            <div class="stat-card" data-target="2" data-suffix="">
+              <div class="stat-number"><span class="counter">0</span><span class="stat-unit">lng.</span></div>
+              <div class="stat-label">maîtrisées</div>
+            </div>
+            <div class="stat-card" data-target="100" data-suffix="%">
+              <div class="stat-number"><span class="counter">0</span><span class="stat-unit">%</span></div>
+              <div class="stat-label">investissement</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Competences Section -->
+    <section id="competences" class="section competences-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Savoir-faire</span>
+          <h2 class="section-title">Compétences & Langues</h2>
+        </div>
+        <div class="competences-grid">
+          <div class="skills-column" data-aos="fade-right">
+            <h3 class="column-title">💡 Compétences</h3>
+            <div class="skill-card">
+              <div class="skill-header">
+                <span class="skill-icon">📊</span>
+                <div>
+                  <div class="skill-name">Analyse Économique</div>
+                  <div class="skill-level">Expert</div>
+                </div>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-header">
+                <span class="skill-icon">⌨️</span>
+                <div>
+                  <div class="skill-name">Saisie de données</div>
+                  <div class="skill-level">Expert</div>
+                </div>
+                <span class="skill-percent">95%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-header">
+                <span class="skill-icon">🖥️</span>
+                <div>
+                  <div class="skill-name">Bureautique (MS Office)</div>
+                  <div class="skill-level">Avancé</div>
+                </div>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-header">
+                <span class="skill-icon">💬</span>
+                <div>
+                  <div class="skill-name">Modération & Chat</div>
+                  <div class="skill-level">Avancé</div>
+                </div>
+                <span class="skill-percent">88%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-header">
+                <span class="skill-icon">👥</span>
+                <div>
+                  <div class="skill-name">Travail en équipe</div>
+                  <div class="skill-level">Expert</div>
+                </div>
+                <span class="skill-percent">95%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+          </div>
+          <div class="languages-column" data-aos="fade-left">
+            <h3 class="column-title">🌍 Langues</h3>
+            <div class="lang-card">
+              <div class="lang-flag">🇫🇷</div>
+              <div class="lang-info">
+                <div class="lang-name">Français</div>
+                <div class="lang-level">Courant</div>
+                <div class="lang-dots">
+                  <span class="dot filled"></span><span class="dot filled"></span>
+                  <span class="dot filled"></span><span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                </div>
+              </div>
+              <div class="lang-badge">C1</div>
+            </div>
+            <div class="lang-card">
+              <div class="lang-flag">🇬🇧</div>
+              <div class="lang-info">
+                <div class="lang-name">Anglais</div>
+                <div class="lang-level">Intermédiaire</div>
+                <div class="lang-dots">
+                  <span class="dot filled"></span><span class="dot filled"></span>
+                  <span class="dot filled"></span><span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+              <div class="lang-badge">B1</div>
+            </div>
+            <div class="lang-card">
+              <div class="lang-flag">🇲🇬</div>
+              <div class="lang-info">
+                <div class="lang-name">Malgache</div>
+                <div class="lang-level">Langue Maternelle</div>
+                <div class="lang-dots">
+                  <span class="dot filled"></span><span class="dot filled"></span>
+                  <span class="dot filled"></span><span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                </div>
+              </div>
+              <div class="lang-badge">LM</div>
+            </div>
+
+            <!-- Recruiter Match Widget -->
+            <div class="match-widget" id="match-widget">
+              <h4 class="match-title">🎯 Êtes-vous le bon recruteur ?</h4>
+              <p class="match-subtitle">Sélectionnez vos besoins :</p>
+              <div class="match-options">
+                <label class="match-opt"><input type="checkbox" value="20" id="m1" /><span>Saisie de données</span></label>
+                <label class="match-opt"><input type="checkbox" value="20" id="m2" /><span>Bureautique</span></label>
+                <label class="match-opt"><input type="checkbox" value="20" id="m3" /><span>Économie / Analyse</span></label>
+                <label class="match-opt"><input type="checkbox" value="20" id="m4" /><span>Chat / Modération</span></label>
+                <label class="match-opt"><input type="checkbox" value="20" id="m5" /><span>Travail en équipe</span></label>
+              </div>
+              <div class="match-result" id="match-result">
+                <div class="match-bar-wrap">
+                  <div class="match-bar" id="match-bar" style="width:0%"></div>
+                </div>
+                <p class="match-score" id="match-score">Sélectionnez des besoins ci-dessus</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parcours Section -->
+    <section id="parcours" class="section parcours-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Mon histoire</span>
+          <h2 class="section-title">Parcours & Expériences</h2>
+        </div>
+        <div class="timeline-tabs" data-aos="fade-up">
+          <button class="tab-btn active" id="tab-all" data-filter="all">Tout voir</button>
+          <button class="tab-btn" id="tab-education" data-filter="education">🎓 Formation</button>
+          <button class="tab-btn" id="tab-experience" data-filter="experience">💼 Expérience</button>
+        </div>
+        <div class="timeline" id="timeline">
+
+          <!-- Expériences -->
+          <div class="timeline-item experience" data-aos="fade-up">
+            <div class="tl-dot exp-dot"></div>
+            <div class="tl-card">
+              <div class="tl-badge exp-badge">💼 Expérience</div>
+              <div class="tl-date">2024 — 2026</div>
+              <h3 class="tl-title">Opérateur de Saisie</h3>
+              <div class="tl-org">ISFPS Leader</div>
+              <p class="tl-desc">Saisie et traitement de données à temps partiel pour l'Institut ISFPS Leader. Gestion de fichiers, vérification d'informations et organisation de bases de données.</p>
+              <div class="tl-tags">
+                <span class="tl-tag">Saisie</span>
+                <span class="tl-tag">Temps partiel</span>
+                <span class="tl-tag">Données</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item experience" data-aos="fade-up" data-delay="100">
+            <div class="tl-dot exp-dot"></div>
+            <div class="tl-card">
+              <div class="tl-badge exp-badge">💼 Expérience</div>
+              <div class="tl-date">Oct — Déc 2025</div>
+              <h3 class="tl-title">Chatteur / Modérateur</h3>
+              <div class="tl-org">Mission freelance</div>
+              <p class="tl-desc">Animation de conversations en ligne, gestion de communauté et modération de contenu. Développement des compétences en communication digitale et gestion client.</p>
+              <div class="tl-tags">
+                <span class="tl-tag">Chat</span>
+                <span class="tl-tag">Modération</span>
+                <span class="tl-tag">Communication</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formation -->
+          <div class="timeline-item education" data-aos="fade-up" data-delay="200">
+            <div class="tl-dot edu-dot"></div>
+            <div class="tl-card">
+              <div class="tl-badge edu-badge">🎓 Formation</div>
+              <div class="tl-date">2025</div>
+              <h3 class="tl-title">Licence en Économie</h3>
+              <div class="tl-org">Université CNTMAD</div>
+              <p class="tl-desc">Formation approfondie en économie générale, micro et macro-économie, analyse quantitative et gestion. Obtention de la Licence avec succès.</p>
+              <div class="tl-tags">
+                <span class="tl-tag">Économie</span>
+                <span class="tl-tag">Licence</span>
+                <span class="tl-tag">Analyse</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item education" data-aos="fade-up" data-delay="300">
+            <div class="tl-dot edu-dot"></div>
+            <div class="tl-card">
+              <div class="tl-badge edu-badge">🎓 Compétence</div>
+              <div class="tl-date">2025</div>
+              <h3 class="tl-title">compétence en front-end, back-end et analyse de donnée</h3>
+              <div class="tl-org">Université d'Antananarivo</div>
+              <p class="tl-desc">: HTML5, CSS3, JavaScript (bases), Python (numpy, fatsAPI ) , Node.js.</p>
+              <div class="tl-tags">
+                <span class="tl-tag">BAC+2</span>
+                <span class="tl-tag">Économie</span>
+                <span class="tl-tag">Gestion</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item education" data-aos="fade-up" data-delay="400">
+            <div class="tl-dot edu-dot"></div>
+            <div class="tl-card">
+              <div class="tl-badge edu-badge">🎓 Formation</div>
+              <div class="tl-date">2018</div>
+              <h3 class="tl-title">BAC Série C</h3>
+              <div class="tl-org">Lycée Saint-Pierre Canisius — Ambohipo</div>
+              <p class="tl-desc">Baccalauréat série C (Mathématiques et Sciences Physiques) obtenu au Lycée Saint-Pierre Canisius à Ambohipo, fondement solide en sciences et logique analytique.</p>
+              <div class="tl-tags">
+                <span class="tl-tag">BAC Série C</span>
+                <span class="tl-tag">Mathématiques</span>
+                <span class="tl-tag">Sciences</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item education" data-aos="fade-up" data-delay="500">
+            <div class="tl-dot edu-dot"></div>
+            <div class="tl-card">
+              <div class="tl-badge edu-badge">📜 Certification</div>
+              <div class="tl-date">2016</div>
+              <h3 class="tl-title">Certificat en Bureautique</h3>
+              <div class="tl-org">Aceem Business School</div>
+              <p class="tl-desc">Certification professionnelle en outils bureautiques : traitement de texte, tableur, présentation assistée par ordinateur et gestion informatique de bureau.</p>
+              <div class="tl-tags">
+                <span class="tl-tag">Word</span>
+                <span class="tl-tag">Excel</span>
+                <span class="tl-tag">PowerPoint</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intérêts Section -->
+    <section id="interets" class="section interets-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Hors du travail</span>
+          <h2 class="section-title">Centres d'Intérêt</h2>
+        </div>
+        <div class="interets-grid">
+          <div class="interet-card" data-aos="fade-up" data-delay="0">
+            <div class="interet-icon-wrap" style="--color: #7c3aed">
+              <span class="interet-icon">🎮</span>
+            </div>
+            <h3 class="interet-name">Jeux Vidéo</h3>
+            <p class="interet-desc">Passionnée par les jeux de stratégie et d'aventure. Les jeux vidéo développent la réflexion rapide, la persévérance et la résolution de problèmes.</p>
+          </div>
+          <div class="interet-card" data-aos="fade-up" data-delay="100">
+            <div class="interet-icon-wrap" style="--color: #ec4899">
+              <span class="interet-icon">💃</span>
+            </div>
+            <h3 class="interet-name">Danse</h3>
+            <p class="interet-desc">La danse comme expression artistique et culturelle. Une discipline qui enseigne la coordination, la discipline et l'écoute de l'autre.</p>
+          </div>
+          <div class="interet-card" data-aos="fade-up" data-delay="200">
+            <div class="interet-icon-wrap" style="--color: #f59e0b">
+              <span class="interet-icon">🏀</span>
+            </div>
+            <h3 class="interet-name">Basket-ball</h3>
+            <p class="interet-desc">Sport d'équipe par excellence qui forge l'esprit de groupe, la communication et la compétitivité — des valeurs que j'apporte au quotidien au travail.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Restons connectés</span>
+          <h2 class="section-title">Me Contacter</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info" data-aos="fade-right">
+            <p class="contact-intro">
+              Je suis ouvert à toute opportunité professionnelle. N'hésitez pas à me contacter pour discuter d'un poste ou d'une collaboration !
+            </p>
+            <div class="contact-cards">
+              <button class="contact-card" id="copy-phone" onclick="copyToClipboard('0322142018', 'Numéro copié !')" aria-label="Copier le numéro de téléphone">
+                <div class="contact-card-icon">📱</div>
+                <div class="contact-card-info">
+                  <div class="contact-card-label">Téléphone</div>
+                  <div class="contact-card-value">032 21 420 18</div>
+                </div>
+                <div class="contact-card-action">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </div>
+              </button>
+              <button class="contact-card" id="copy-email" onclick="copyToClipboard('hsoja097@gmail.com', 'Email copié !')" aria-label="Copier l'adresse email">
+                <div class="contact-card-icon">✉️</div>
+                <div class="contact-card-info">
+                  <div class="contact-card-label">Email</div>
+                  <div class="contact-card-value">hsoja097@gmail.com</div>
+                </div>
+                <div class="contact-card-action">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </div>
+              </button>
+              <div class="contact-card static-card">
+                <div class="contact-card-icon">📍</div>
+                <div class="contact-card-info">
+                  <div class="contact-card-label">Adresse</div>
+                  <div class="contact-card-value">LOT VA 27 AT Tsiadana</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="contact-form-wrap" data-aos="fade-left">
+            <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+              <h3 class="form-title">Envoyer un message</h3>
+              <div class="form-group">
+                <label for="sender-name">Votre nom</label>
+                <input type="text" id="sender-name" name="name" placeholder="Jean Dupont" required />
+              </div>
+              <div class="form-group">
+                <label for="sender-email">Votre email</label>
+                <input type="email" id="sender-email" name="email" placeholder="jean@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="sender-message">Votre message</label>
+                <textarea id="sender-message" name="message" rows="4" placeholder="Bonjour, je suis intéressé(e) par votre profil..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="form-submit-btn">
+                <span>Envoyer le message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+          </div> -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="brand-initials">ST</span>
+        <span>SOJA TOLISOA Hanitse</span>
+      </div>
+      <p class="footer-tagline">Économiste · Opérateur de saisie · Passionnée</p>
+      <p class="footer-copy">© 2026 SOJA TOLISOA Hanitse — Tous droits réservés. Fait avec ❤️ à Antananarivo.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
